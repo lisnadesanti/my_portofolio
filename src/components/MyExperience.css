@@ -137,10 +137,19 @@
   flex: 1;
 }
 
+/* ⭐️ PERBAIKAN UTAMA: IKON PETIR SEJAJAR DENGAN JUDUL */
 .job-details h3 {
   font-size: 1.4rem;
   color: #ffffff;
   margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.job-details h3 .icon {
+  font-size: 1.2rem;
+  color: #ff4da6;
 }
 
 .company-name {
@@ -242,6 +251,11 @@
   .job-details h3 {
     font-size: 1.25rem;
     text-align: center;
+    justify-content: center; /* agar ikon & teks tetap sejajar di tengah */
+  }
+
+  .job-details h3 .icon {
+    font-size: 1rem;
   }
 
   .company-name {
