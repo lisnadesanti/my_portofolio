@@ -1,0 +1,221 @@
+.experience-section {
+  min-height: auto;
+  background: linear-gradient(135deg, #0d021a, #1a0a2e, #3c1a5f);
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title h2 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+  display: inline-block;
+  position: relative;
+  animation: fadeInUp 1s ease-out;
+}
+
+.section-title .underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff006e, #ff4da6);
+  margin: 1rem auto;
+  border-radius: 2px;
+  animation: underlineGrow 1s ease-out;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+.timeline {
+  position: relative;
+  padding-left: 80px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #4facfe, transparent);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 55px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: #4facfe;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.7);
+}
+
+.timeline-content {
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.2);
+}
+
+.company-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(79, 172, 254, 0.5));
+}
+
+.job-details {
+  flex: 1;
+}
+
+.job-details h3 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.company-name {
+  color: #4facfe;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.job-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.responsibilities h4 {
+  color: #4facfe;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.responsibilities ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.responsibilities li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.responsibilities li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4facfe;
+  font-weight: bold;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .timeline-dot {
+    display: none;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

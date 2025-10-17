@@ -1,0 +1,272 @@
+.about-section {
+  min-height: auto;
+  background: linear-gradient(135deg, #0d021a, #1a0a2e, #3c1a5f);
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title h2 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+  display: inline-block;
+  position: relative;
+  animation: fadeInUp 1s ease-out;
+}
+
+.section-title .underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff006e, #ff4da6);
+  margin: 1rem auto;
+  border-radius: 2px;
+  animation: underlineGrow 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+/* 🔧 Perbaikan layout agar konten selalu terlihat */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.about-text,
+.stats-grid {
+  min-width: 0;
+  flex: 1 1 300px;
+}
+
+.about-text {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  border-left: 4px solid #ff4da6;
+  padding-left: 1.5rem;
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ff4da6;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0.5rem 0;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* 🔷 Core Skills — TANPA BOX */
+.core-skills-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.core-skills-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #ffe6f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.core-skills-section h3::before,
+.core-skills-section h3::after {
+  content: "<>";
+  font-weight: bold;
+  color: #ff4da6;
+  font-size: 1.2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  background: rgba(255, 105, 180, 0.1);
+  color: #ff4da6;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 105, 180, 0.3);
+}
+
+.skill-tag:hover {
+  background: rgba(255, 105, 180, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+/* 🔷 CTA Buttons — TANPA BOX */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* 🔧 Gaya tombol umum — berlaku untuk <button> dan <a> */
+.cta-buttons .btn-download,
+.cta-buttons .btn-view {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.btn-download {
+  background: linear-gradient(90deg, #ff006e, #ff4da6);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.6);
+}
+
+.btn-view {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 105, 180, 0.3);
+}
+
+.btn-view:hover {
+  background: rgba(255, 105, 180, 0.1);
+  color: #ff4da6;
+  border-color: #ff4da6;
+  transform: translateY(-2px);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .core-skills-section {
+    margin-top: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn-download,
+  .btn-view {
+    width: 100%;
+    max-width: 300px;
+  }
+}
