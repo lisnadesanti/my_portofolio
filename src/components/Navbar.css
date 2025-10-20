@@ -16,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%; /* ⬅️ tambahkan ini untuk keamanan */
 }
 
 .nav-logo {
@@ -46,6 +47,7 @@
   border-radius: 20px;
   transition: all 0.3s ease;
   display: block;
+  box-sizing: border-box; /* ⬅️ tambahkan ini */
 }
 
 .nav-link:hover,
@@ -90,11 +92,12 @@
     right: 0;
     display: none;
     flex-direction: column;
-    /* 🔥 SAMA PERSIS DENGAN NAVBAR 🔥 */
     background: linear-gradient(90deg, #581c87, #9d174d);
     padding: 1rem 0;
     gap: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Sedikit shadow biar terpisah dari konten */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    width: 100%; /* ⬅️ tambahkan ini */
+    max-width: 100%; /* ⬅️ hindari overflow */
   }
 
   .nav-menu.active {
@@ -109,14 +112,14 @@
     font-weight: 500;
     border-radius: 0;
     transition: background 0.25s ease, transform 0.15s ease;
+    box-sizing: border-box; /* ⬅️ INI YANG PALING PENTING */
   }
 
-  /* Efek saat hover/klik — sedikit gelap + sedikit naik */
   .nav-link:hover,
   .nav-link.active {
-    background: rgba(0, 0, 0, 0.2); /* Overlay gelap halus di atas gradien */
+    background: rgba(0, 0, 0, 0.2);
     color: white;
-    transform: translateY(-1px); /* Efek "angkat" halus */
+    transform: translateY(-1px);
     box-shadow: none;
   }
 

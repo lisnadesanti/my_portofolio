@@ -5,14 +5,18 @@
   position: relative;
   overflow: hidden;
   color: #ffffff;
-  /* Tidak ada margin/padding eksternal */
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* ⚠️ PERBAIKAN UTAMA: TAMBAHKAN width & box-sizing */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1rem; /* ⬅️ jaga padding tetap ada */
+  width: 100%; /* ⬅️ tambahkan ini */
+  box-sizing: border-box; /* ⬅️ tambahkan ini */
 }
 
 .section-title {
@@ -76,11 +80,15 @@
   }
 }
 
+/* ⚠️ PERBAIKAN: GANTI auto-fit → 2 kolom di semua device */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); /* ⬅️ lebih aman */
+  gap: 1.8rem; /* ⬇️ sedikit dikurangi */
   padding: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .skill-card {
@@ -97,6 +105,9 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .skill-card:hover {
@@ -126,13 +137,18 @@
 
 /* Responsif */
 @media (max-width: 768px) {
+  .skills-section {
+    padding: 1.5rem 1rem;
+    padding-top: 70px; /* ⬅️ sesuaikan dengan navbar */
+  }
+
   .section-title h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr); /* ⬅️ pastikan 2 kolom */
+    gap: 1.2rem; /* ⬇️ lebih rapat */
   }
 
   .skill-icon {
@@ -147,6 +163,16 @@
 
 @media (max-width: 480px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* ⬅️ tetap 2 kolom */
+    gap: 1rem; /* ⬇️ lebih rapat */
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
   }
 }

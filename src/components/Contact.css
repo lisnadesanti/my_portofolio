@@ -5,11 +5,17 @@
   position: relative;
   overflow: hidden;
   color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* ⚠️ PERBAIKAN UTAMA: TAMBAHKAN width & box-sizing */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%; /* ⬅️ tambahkan ini */
+  padding: 0 1rem; /* ⬅️ jaga padding tetap ada */
+  box-sizing: border-box; /* ⬅️ tambahkan ini */
 }
 
 .section-title {
@@ -63,15 +69,23 @@
   display: flex;
   gap: 3rem;
   align-items: flex-start;
+  width: 100%;
+  max-width: 1000px; /* ⬅️ batasi lebar maksimal */
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.contact-info, .contact-form {
+.contact-info,
+.contact-form {
   flex: 1;
   background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 16px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-info h3,
@@ -88,6 +102,8 @@
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-icon {
@@ -129,6 +145,8 @@
 /* Form */
 .form-group {
   margin-bottom: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input,
@@ -141,6 +159,7 @@
   color: white;
   font-size: 1rem;
   transition: all 0.3s;
+  box-sizing: border-box; /* ⬅️ tambahkan ini */
 }
 
 .form-group input:focus,
@@ -161,6 +180,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box; /* ⬅️ tambahkan ini */
 }
 
 .btn-send:hover {
@@ -170,16 +190,53 @@
 
 /* Responsif */
 @media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-    gap: 2rem;
+  .contact-section {
+    padding: 1.5rem 1rem;
+    padding-top: 70px; /* ⬅️ sesuaikan dengan navbar */
   }
 
   .section-title h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .subtitle {
     font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%; /* ⬅️ pastikan tidak melebar */
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-text h4 {
+    font-size: 1rem;
+  }
+
+  .contact-text p,
+  .contact-link {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-send {
+    padding: 0.8rem;
+    font-size: 0.95rem;
   }
 }

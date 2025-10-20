@@ -5,11 +5,17 @@
   position: relative;
   overflow: hidden;
   color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* ⚠️ PERBAIKAN UTAMA: TAMBAHKAN width & box-sizing */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%; /* ⬅️ tambahkan ini */
+  padding: 0 1rem; /* ⬅️ jaga padding tetap ada */
+  box-sizing: border-box; /* ⬅️ tambahkan ini */
 }
 
 .section-title {
@@ -73,10 +79,14 @@
   }
 }
 
+/* ⚠️ PERBAIKAN: GANTI auto-fit → 1 kolom di mobile */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card {
@@ -86,6 +96,9 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card:hover {
@@ -98,6 +111,7 @@
   height: 250px;
   overflow: hidden;
   position: relative;
+  box-sizing: border-box;
 }
 
 .project-image img {
@@ -113,6 +127,7 @@
 
 .project-info {
   padding: 1.5rem;
+  box-sizing: border-box;
 }
 
 .project-info h3 {
@@ -150,6 +165,7 @@
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 105, 180, 0.3);
+  box-sizing: border-box;
 }
 
 .tag:hover {
@@ -160,15 +176,43 @@
 
 /* Responsif */
 @media (max-width: 768px) {
+  .portfolio-section {
+    padding: 1.5rem 1rem;
+    padding-top: 70px; /* ⬅️ sesuaikan dengan navbar */
+  }
+
   .section-title h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* ⬅️ pastikan 1 kolom */
+    gap: 1.5rem; /* ⬇️ lebih rapat */
   }
 
   .project-image {
     height: 200px;
+  }
+
+  .project-info {
+    padding: 1.2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
   }
 }

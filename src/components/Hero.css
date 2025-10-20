@@ -7,6 +7,8 @@
   padding: 2rem;
   position: relative;
   overflow: hidden;
+  width: 100%; /* ⬅️ tambahkan ini */
+  box-sizing: border-box; /* ⬅️ tambahkan ini */
 }
 
 /* ✨ BINTANG-BINTANG PUTIH/ABU-ABU */
@@ -16,6 +18,7 @@
   font-size: 12px;
   animation: twinkleStar 3s infinite ease-in-out;
   z-index: 0;
+  pointer-events: none; /* ⬅️ hindari ganggu interaksi */
 }
 
 .star-1 { top: 15%; left: 10%; animation-delay: 0s; }
@@ -28,21 +31,23 @@
 /* 🌟 BINTANG KUNING UTAMA */
 .star-main {
   position: absolute;
-  color: #FFD700; /* Kuning emas */
+  color: #FFD700;
   font-size: 24px;
   top: 25%;
   right: 35%;
   z-index: 1;
   animation: twinkleStarMain 2s infinite ease-in-out;
+  pointer-events: none;
 }
 
-/* Partikel kecil kuning di sekitar bintang utama */
+/* Partikel kecil kuning */
 .star-particle {
   position: absolute;
   color: #FFD700;
   font-size: 8px;
   opacity: 0.7;
   animation: floatParticleSmall 3s infinite ease-in-out;
+  pointer-events: none;
 }
 
 .star-particle-1 { top: 22%; right: 33%; animation-delay: 0s; }
@@ -71,6 +76,8 @@
   padding: 2rem;
   z-index: 1;
   color: #ffffff;
+  width: 100%; /* ⬅️ tambahkan ini */
+  box-sizing: border-box; /* ⬅️ tambahkan ini */
 }
 
 .profile-container {
@@ -80,7 +87,6 @@
   gap: 1.5rem;
 }
 
-/* 🔍 FOTO PROFIL DIPERBESAR */
 .profile-circle {
   position: relative;
   width: 220px;
@@ -199,14 +205,15 @@
 /* ✅ RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .hero {
-    padding: 1.5rem;
+    padding: 1rem; /* ⬇️ kurangi dari 1.5rem */
     min-height: auto;
-    padding-top: 7rem;
+    padding-top: 70px; /* ⬅️ sesuaikan dengan navbar */
     justify-content: flex-start;
   }
 
   .hero-content {
     padding: 1.5rem 1rem;
+    max-width: 100%; /* ⬅️ pastikan tidak melebar */
   }
 
   .profile-circle {
@@ -232,7 +239,6 @@
     font-size: 0.8rem;
   }
 
-  /* ✨ Perbaikan: Geser bintang kuning ke pojok kanan atas, jauh dari foto profil */
   .star-main {
     top: 8%;
     right: 12%;
