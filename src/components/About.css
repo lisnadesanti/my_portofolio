@@ -71,26 +71,12 @@
   flex: 1 1 300px;
 }
 
-/* ⭐️ PERBAIKAN: GARIS PINK HANYA SEJAJAR DENGAN TINGGI TEKS — TIDAK SAMPAI BAWAH */
 .about-text {
   line-height: 1.8;
   font-size: 1.1rem;
-  position: relative;
-  padding: 1.5rem;
-  padding-left: 2.5rem; /* ruang untuk garis */
+  border-left: 4px solid #ff4da6;
+  padding-left: 1.5rem;
   animation: slideInLeft 1s ease-out;
-}
-
-.about-text::before {
-  content: '';
-  position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
-  bottom: 1.5rem;
-  width: 4px;
-  background: #ff4da6;
-  border-radius: 2px;
-  z-index: -1;
 }
 
 @keyframes slideInLeft {
@@ -223,15 +209,10 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   text-align: center;
   text-decoration: none;
   line-height: 1.5;
-  width: 100%;
-  max-width: 280px;
-  box-sizing: border-box;
 }
 
 .btn-download {
@@ -258,7 +239,7 @@
   transform: translateY(-2px);
 }
 
-/* ✅ RESPONSIF — MOBILE */
+/* ✅ RESPONSIF — PERBAIKAN UTAMA: CARD 2 KOLOM DI MOBILE */
 @media (max-width: 768px) {
   .about-section {
     padding: 2.5rem 1.5rem;
@@ -276,16 +257,12 @@
   .about-text {
     font-size: 1rem;
     line-height: 1.6;
-    padding: 1.2rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: justify;
   }
 
-  .about-text::before {
-    left: 1.2rem;
-    top: 1.2rem;
-    bottom: 1.2rem;
-  }
-
+  /* ⭐️ PERBAIKAN: TAMPILKAN 2 KOLOM DI HP */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -325,7 +302,6 @@
     flex-direction: column;
     gap: 0.8rem;
     margin-top: 1.5rem;
-    width: 100%; /* ⭐️ Pastikan container tombol lebar penuh */
   }
 
   .btn-download,
@@ -334,6 +310,5 @@
     max-width: 280px;
     padding: 0.8rem;
     font-size: 0.95rem;
-    justify-content: center; /* ⭐️ Pastikan teks ditengah */
   }
 }
