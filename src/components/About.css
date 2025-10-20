@@ -71,7 +71,7 @@
   flex: 1 1 300px;
 }
 
-/* ⭐️ PERBAIKAN: GARIS PINK HANYA SEJAJAR DENGAN TINGGI TEKS */
+/* ⭐️ PERBAIKAN: GARIS PINK HANYA SEJAJAR DENGAN TINGGI TEKS — TIDAK SAMPAI BAWAH */
 .about-text {
   line-height: 1.8;
   font-size: 1.1rem;
@@ -325,6 +325,7 @@
     flex-direction: column;
     gap: 0.8rem;
     margin-top: 1.5rem;
+    width: 100%; /* ⭐️ Pastikan container tombol lebar penuh */
   }
 
   .btn-download,
@@ -333,5 +334,6 @@
     max-width: 280px;
     padding: 0.8rem;
     font-size: 0.95rem;
+    justify-content: center; /* ⭐️ Pastikan teks ditengah */
   }
 }
