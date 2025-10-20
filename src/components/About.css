@@ -79,13 +79,13 @@
   animation: slideInLeft 1s ease-out;
 }
 
-/* Garis pink vertikal yang proporsional */
+/* ✅ GARIS PINK YANG PANJANGNYA SESUAI TEKS (4 baris) */
 .about-text::before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
+  height: 7.2em; /* 1.8em × 4 baris */
   width: 4px;
   background: #ff4da6;
   border-radius: 2px;
@@ -269,12 +269,19 @@
   .about-text {
     font-size: 1rem;
     line-height: 1.6;
-    padding-left: 1.5rem; /* Sesuaikan agar sejajar dengan ::before */
+    padding-left: 1.5rem;
     padding-right: 1rem;
     text-align: justify;
+    position: relative;
   }
 
-  /* Garis pink tetap digunakan via ::before, tidak perlu ubah di sini */
+  /* ✅ GARIS PINK DI MOBILE — SESUAI TINGGI TEKS (4 baris) */
+  .about-text::before {
+    height: 6.4em; /* 1.6em × 4 baris */
+    width: 4px;
+    background: #ff4da6;
+    border-radius: 2px;
+  }
 
   /* ⭐️ PERBAIKAN: TAMPILKAN 2 KOLOM DI HP */
   .stats-grid {
@@ -316,7 +323,7 @@
     flex-direction: column;
     gap: 0.8rem;
     margin-top: 1.5rem;
-    align-items: center; /* 🔑 Ini yang membuat tombol sejajar di tengah */
+    align-items: center;
   }
 
   .btn-download,
