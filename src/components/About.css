@@ -120,6 +120,19 @@
   }
 }
 
+/* ✨ Animasi mengambang untuk card */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .stat-card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
@@ -128,6 +141,9 @@
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* ✅ Efek mengambang otomatis */
+  animation: float 3s ease-in-out infinite;
+  will-change: transform;
 }
 
 .stat-card:hover {
@@ -193,11 +209,15 @@
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 105, 180, 0.3);
+  /* ✅ Efek mengambang untuk skill tag */
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 0.5s; /* sedikit delay agar tidak seragam */
+  will-change: transform;
 }
 
 .skill-tag:hover {
   background: rgba(255, 105, 180, 0.2);
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-3px); /* tambah sedikit naik saat hover */
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
 }
 
@@ -291,6 +311,7 @@
 
   .stat-card {
     padding: 1.2rem;
+    /* Animasi float tetap aktif di mobile */
   }
 
   .stat-icon {
@@ -317,6 +338,7 @@
   .skill-tag {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
+    /* Animasi float tetap aktif */
   }
 
   .cta-buttons {
