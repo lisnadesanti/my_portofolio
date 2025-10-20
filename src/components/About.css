@@ -61,8 +61,7 @@
   flex-wrap: wrap;
   gap: 2.5rem;
   align-items: flex-start;
-  /* ⬇️ KURANGI MARGIN-BOTTOM UNTUK MENDEKATKAN STATISTIK KE TEKS */
-  margin-bottom: 0.5rem; /* Dari 1.5rem → 0.5rem */
+  margin-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -78,8 +77,6 @@
   padding-left: 1.5rem;
   position: relative;
   animation: slideInLeft 1s ease-out;
-  /* Tambahkan padding-bottom kecil jika perlu */
-  padding-bottom: 0.5rem;
 }
 
 /* ✅ GARIS PINK YANG PANJANGNYA SESUAI TEKS (4 baris) */
@@ -158,13 +155,13 @@
 
 /* 🔷 Core Skills — TANPA BOX */
 .core-skills-section {
-  margin-top: 1rem; /* Kurangi dari 2rem → 1rem */
+  margin-top: 2rem;
   text-align: center;
 }
 
 .core-skills-section h3 {
   font-size: 1.6rem;
-  margin-bottom: 0.5rem; /* Kurangi dari 1rem */
+  margin-bottom: 1rem;
   color: #ffe6f0;
   display: flex;
   align-items: center;
@@ -209,7 +206,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem; /* Kurangi dari 2rem */
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
@@ -266,7 +263,7 @@
 
   .about-content {
     flex-direction: column;
-    gap: 1.5rem; /* Kurangi dari 2rem */
+    gap: 2rem;
   }
 
   .about-text {
@@ -276,7 +273,6 @@
     padding-right: 1rem;
     text-align: justify;
     position: relative;
-    padding-bottom: 0.5rem; /* Tambahkan sedikit padding bawah */
   }
 
   /* ✅ GARIS PINK DI MOBILE — SESUAI TINGGI TEKS (4 baris) */
@@ -310,7 +306,7 @@
   }
 
   .core-skills-section {
-    margin-top: 1rem; /* Kurangi dari 1.5rem */
+    margin-top: 1.5rem;
   }
 
   .skills-list {
@@ -326,7 +322,7 @@
   .cta-buttons {
     flex-direction: column;
     gap: 0.8rem;
-    margin-top: 1rem; /* Kurangi dari 1.5rem */
+    margin-top: 1.5rem;
     align-items: center;
   }
 
