@@ -1,4 +1,3 @@
-/* ========== CONTACT SECTION ========== */
 .contact-section {
   min-height: auto;
   background: linear-gradient(135deg, #0d021a, #1a0a2e, #3c1a5f);
@@ -8,28 +7,18 @@
   color: #ffffff;
 }
 
-/* ⚠️ PERBAIKAN: TAMBAHKAN PADDING-TOP DI MOBILE AGAR TIDAK TERTUTUP NAVBAR */
-@media (max-width: 768px) {
-  .contact-section {
-    padding: 1.5rem 1rem;
-    padding-top: 70px;
-  }
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  padding: 0 1rem;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-title h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
   display: inline-block;
@@ -41,16 +30,16 @@
   width: 80px;
   height: 4px;
   background: linear-gradient(90deg, #ff006e, #ff4da6);
-  margin: 0.8rem auto;
+  margin: 1rem auto;
   border-radius: 2px;
   animation: underlineGrow 1s ease-out;
 }
 
 .subtitle {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #cccccc;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   opacity: 0.9;
   animation: fadeIn 1s ease-out;
 }
@@ -70,62 +59,52 @@
   to { opacity: 0.9; }
 }
 
-/* ========== LAYOUT UTAMA ========== */
 .contact-content {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: flex-start;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-.contact-info,
-.contact-form {
+.contact-info, .contact-form {
   flex: 1;
-  min-width: 0;
   background: rgba(255, 255, 255, 0.05);
-  padding: 1.8rem;
+  padding: 2rem;
   border-radius: 16px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 100%;
 }
 
 .contact-info h3,
 .contact-form h3 {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   color: #ff4da6;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
-/* ========== CONTACT INFO ========== */
 .contact-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1.2rem;
-  padding-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-icon {
   flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 105, 180, 0.1);
-  border-radius: 8px;
+  border-radius: 10px;
   color: #ff4da6;
-  font-size: 1.1rem;
 }
 
 .contact-text h4 {
-  margin: 0 0 0.25rem 0;
-  font-size: 1rem;
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
 }
 
 .contact-text p {
@@ -147,27 +126,21 @@
   text-decoration: underline;
 }
 
-/* ========== FORM ========== */
+/* Form */
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(0, 0, 0, 0.2);
   color: white;
   font-size: 1rem;
   transition: all 0.3s;
-  box-sizing: border-box; /* ⬅️ WAJIB */
-}
-
-.form-group textarea {
-  min-height: 120px;
-  resize: vertical;
 }
 
 .form-group input:focus,
@@ -179,7 +152,7 @@
 
 .btn-send {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.9rem;
   background: linear-gradient(90deg, #ff006e, #ff4da6);
   color: white;
   border: none;
@@ -188,7 +161,6 @@
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-sizing: border-box;
 }
 
 .btn-send:hover {
@@ -196,50 +168,18 @@
   box-shadow: 0 4px 12px rgba(255, 105, 180, 0.5);
 }
 
-/* ========== RESPONSIF MOBILE ========== */
+/* Responsif */
 @media (max-width: 768px) {
   .contact-content {
     flex-direction: column;
-    gap: 1.8rem;
+    gap: 2rem;
   }
 
   .section-title h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   .subtitle {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-info,
-  .contact-form {
-    padding: 1.5rem;
-  }
-
-  .contact-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-  }
-
-  .contact-text h4 {
-    font-size: 0.95rem;
-  }
-
-  .contact-text p,
-  .contact-link {
-    font-size: 0.85rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    padding: 0.7rem 0.9rem;
-    font-size: 0.95rem;
-  }
-
-  .btn-send {
-    padding: 0.75rem;
-    font-size: 0.95rem;
   }
 }
