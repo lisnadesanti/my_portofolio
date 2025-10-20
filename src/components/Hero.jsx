@@ -18,10 +18,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
-      {/* ❌ PARTIKEL BULATAN DIHAPUS (TIDAK DITAMPILKAN LAGI) */}
-      {/* <div className="particles">...</div> */}
-
-      {/* ✨ BINTANG-BINTANG PUTIH/ABU-ABU (TETAP DIPERTAHANKAN) */}
+      {/* ✨ BINTANG-BINTANG LATAR BELAKANG (tetap di luar) */}
       <div className="star star-1">★</div>
       <div className="star star-2">★</div>
       <div className="star star-3">★</div>
@@ -29,17 +26,21 @@ const Hero = () => {
       <div className="star star-5">★</div>
       <div className="star star-6">★</div>
 
-      {/* 🌟 BINTANG KUNING UTAMA + PARTIKEL KECIL KUNING (DITAMBAHKAN) */}
-      <div className="star-main">★</div>
-      <div className="star-particle star-particle-1">★</div>
-      <div className="star-particle star-particle-2">★</div>
-      <div className="star-particle star-particle-3">★</div>
-
       {/* Konten Utama */}
       <div className="hero-content">
-        <div className="profile-circle">
-          <img src={profilePic} alt="Lisna Desanti" />
+        <div className="profile-container">
+          {/* Foto profil */}
+          <div className="profile-circle">
+            <img src={profilePic} alt="Lisna Desanti" />
+          </div>
+
+          {/* 🌟 BINTANG KUNING UTAMA + PARTIKEL — DI DALAM profile-container ✅ */}
+          <div className="star-main">★</div>
+          <div className="star-particle star-particle-1">★</div>
+          <div className="star-particle star-particle-2">★</div>
+          <div className="star-particle star-particle-3">★</div>
         </div>
+
         <h1>Lisna Desanti</h1>
         <h2 className="job-title">
           I'm a{' '}
