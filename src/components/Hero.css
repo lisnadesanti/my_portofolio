@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-/* Partikel animasi */
+/* Partikel bulatan (tetap) */
 .particles {
   position: absolute;
   top: 0;
@@ -37,6 +37,22 @@
 .particle-7 { width: 11px; height: 11px; bottom: 35%; left: 25%; animation-delay: -5s; }
 .particle-8 { width: 7px; height: 7px; bottom: 45%; right: 15%; animation-delay: -7s; }
 
+/* ✨ BINTANG ANIMASI BARU */
+.star {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  animation: twinkleStar 3s infinite ease-in-out;
+  z-index: 0;
+}
+
+.star-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.star-2 { top: 25%; right: 12%; animation-delay: 1s; }
+.star-3 { bottom: 20%; left: 20%; animation-delay: 0.5s; }
+.star-4 { bottom: 30%; right: 25%; animation-delay: 1.5s; }
+.star-5 { top: 40%; left: 25%; animation-delay: 2s; }
+.star-6 { top: 50%; right: 30%; animation-delay: 0.8s; }
+
 @keyframes floatParticle {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
   25% { transform: translate(3px, 5px) rotate(90deg); }
@@ -46,9 +62,10 @@
 
 @keyframes twinkleStar {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.15); }
+  50% { opacity: 0.4; transform: scale(1.2); }
 }
 
+/* Konten utama */
 .hero-content {
   text-align: center;
   max-width: 800px;
@@ -61,18 +78,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
+/* 🔍 FOTO PROFIL DIPERBESAR */
 .profile-circle {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 220px; /* Diperbesar dari 150px */
+  height: 220px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  border: 2px solid rgba(255, 105, 180, 0.3);
-  box-shadow: 0 0 20px rgba(255, 0, 150, 0.3);
+  border: 3px solid rgba(255, 105, 180, 0.3);
+  box-shadow: 0 0 25px rgba(255, 0, 150, 0.4);
   animation: pulse 2s infinite;
 }
 
@@ -123,27 +141,14 @@
 }
 
 @keyframes underlineDraw {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
+  0% { opacity: 0; transform: translateY(10px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
 }
 
 .description {
@@ -170,6 +175,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   text-decoration: none;
   border: 1px solid rgba(255, 105, 180, 0.2);
+  font-size: 1rem; /* Default ukuran ikon teks */
+}
+
+/* 🔽 KECILKAN NAMA GITHUB (atau teks username) */
+.social-icons a.github-username {
+  font-size: 0.85rem; /* Lebih kecil, seperti di Herdi */
+  padding: 0.5rem 0.75rem;
 }
 
 .social-icons a:hover {
@@ -181,23 +193,16 @@
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 150, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(255, 0, 150, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 150, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 150, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 0, 150, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 150, 0); }
 }
 
-/* ✅ RESPONSIVE MOBILE — PERBAIKAN UTAMA */
+/* ✅ RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .hero {
     padding: 1.5rem;
     min-height: auto;
-    /* Memberi ruang untuk navbar fixed di atas */
     padding-top: 7rem;
     justify-content: flex-start;
   }
@@ -207,13 +212,12 @@
   }
 
   .profile-circle {
-    width: 120px;
-    height: 120px;
+    width: 180px; /* Ukuran mobile tetap besar, tapi tidak terlalu */
+    height: 180px;
   }
 
   .hero h1 {
     font-size: 2.2rem;
-    line-height: 1.2;
   }
 
   .job-title {
@@ -224,16 +228,9 @@
     font-size: 1rem;
     margin: 1rem auto;
     max-width: 90%;
-    line-height: 1.5;
   }
 
-  .social-icons {
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-icons a {
-    padding: 0.6rem;
-    font-size: 0.95rem;
+  .social-icons a.github-username {
+    font-size: 0.8rem;
   }
 }
