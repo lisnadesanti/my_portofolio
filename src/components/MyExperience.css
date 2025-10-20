@@ -17,12 +17,17 @@
   margin-bottom: 1.5rem;
 }
 
+/* ✅ PERBAIKAN UTAMA: JUDUL DENGAN DUA IKON TETAP SEJAJAR DI SEMUA UKURAN */
 .section-title h2 {
   font-size: 2.8rem;
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
-  display: inline-block;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem; /* Jarak antara ikon dan teks */
+  margin: 0 auto;
+  white-space: nowrap; /* 🔑 Ini kunci agar tidak patah ke baris baru */
   animation: fadeInUp 1s ease-out;
 }
 
@@ -137,7 +142,6 @@
   flex: 1;
 }
 
-/* ⭐️ PERBAIKAN UTAMA: IKON PETIR SEJAJAR DENGAN JUDUL */
 .job-details h3 {
   font-size: 1.4rem;
   color: #ffffff;
@@ -207,7 +211,8 @@
   }
 
   .section-title h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* 🔽 Diperkecil agar muat dengan dua ikon */
+    gap: 0.5rem;
   }
 
   .subtitle {
@@ -251,7 +256,7 @@
   .job-details h3 {
     font-size: 1.25rem;
     text-align: center;
-    justify-content: center; /* agar ikon & teks tetap sejajar di tengah */
+    justify-content: center;
   }
 
   .job-details h3 .icon {
