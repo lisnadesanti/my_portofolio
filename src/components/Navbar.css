@@ -55,7 +55,7 @@
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
 }
 
-/* Hamburger menu styling — GAYA HERDI ARDANA: PUTIH BERSIH, TEBAL, MINIMALIS */
+/* Hamburger menu styling — GAYA HERDI: PUTIH BERSIH, TEBAL */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -67,13 +67,13 @@
 
 .hamburger span {
   width: 100%;
-  height: 5px; /* Tebal seperti contoh */
-  background-color: #ffffff; /* Putih bersih, tanpa glow */
+  height: 5px;
+  background-color: #ffffff;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Mobile styles */
+/* Mobile styles — DROPDOWN SIMPLE GAYA HERDI */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
@@ -90,10 +90,10 @@
     right: 0;
     display: none;
     flex-direction: column;
-    background: linear-gradient(to bottom, #581c87, #9d174d);
-    padding: 1.5rem;
-    gap: 0.75rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    background: #111111; /* Solid dark — bukan gradien */
+    padding: 1rem 0;
+    gap: 0.5rem;
+    /* Box-shadow dihilangkan untuk kesan clean */
   }
 
   .nav-menu.active {
@@ -102,9 +102,19 @@
 
   .nav-link {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.75rem 1.5rem;
     text-align: center;
-    border-radius: 12px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 0; /* Tidak pakai border-radius */
+    transition: background 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: linear-gradient(90deg, #4f46e5, #8b5cf6); /* Gradien biru ungu gaya Herdi */
+    color: white;
+    box-shadow: none;
   }
 
   .hamburger {
