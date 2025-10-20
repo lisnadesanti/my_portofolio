@@ -55,23 +55,22 @@
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
 }
 
-/* Hamburger menu styling */
+/* Hamburger menu styling — GAYA HERDI ARDANA: PUTIH BERSIH, TEBAL, MINIMALIS */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 24px; /* sedikit dinaikkan agar muat 3 garis tebal */
+  height: 24px;
   cursor: pointer;
 }
 
 .hamburger span {
   width: 100%;
-  height: 4px; /* DIPERTEBAL → lebih keliatan! */
-  background-color: #ffffff; /* Putih solid */
+  height: 5px; /* Tebal seperti contoh */
+  background-color: #ffffff; /* Putih bersih, tanpa glow */
   border-radius: 2px;
   transition: all 0.3s ease;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6); /* Glow halus biar nampol */
 }
 
 /* Mobile styles */
