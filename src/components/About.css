@@ -61,7 +61,7 @@
   flex-wrap: wrap;
   gap: 2.5rem;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem; /* ✅ Diperkecil dari 1.5rem agar lebih padat */
   width: 100%;
 }
 
@@ -155,7 +155,7 @@
 
 /* 🔷 Core Skills — TANPA BOX */
 .core-skills-section {
-  margin-top: 2rem;
+  margin-top: 1.5rem; /* ✅ Diperkecil dari 2rem agar lebih dekat dengan card */
   text-align: center;
 }
 
@@ -206,7 +206,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem; /* ✅ Diperkecil dari 2rem */
   flex-wrap: wrap;
 }
 
@@ -263,7 +263,8 @@
 
   .about-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem; /* ✅ Diperkecil dari 2rem */
+    margin-bottom: 0.5rem; /* ✅ Diperkecil dari 0.75rem agar lebih rapat */
   }
 
   .about-text {
@@ -306,7 +307,7 @@
   }
 
   .core-skills-section {
-    margin-top: 1.5rem;
+    margin-top: 1rem; /* ✅ Diperkecil dari 1.5rem */
   }
 
   .skills-list {
@@ -322,7 +323,7 @@
   .cta-buttons {
     flex-direction: column;
     gap: 0.8rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem; /* ✅ Diperkecil dari 1.5rem */
     align-items: center;
   }
 
