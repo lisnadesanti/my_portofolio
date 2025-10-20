@@ -55,7 +55,7 @@
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
 }
 
-/* Hamburger menu styling — GAYA HERDI: PUTIH BERSIH, TEBAL */
+/* Hamburger menu styling — PUTIH TEBAL, MINIMALIS */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -73,7 +73,7 @@
   transition: all 0.3s ease;
 }
 
-/* Mobile styles — DROPDOWN SIMPLE GAYA HERDI */
+/* Mobile styles — DROPDOWN DENGAN WARNA SAMA SEPERTI NAVBAR */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
@@ -90,10 +90,11 @@
     right: 0;
     display: none;
     flex-direction: column;
-    background: #111111; /* Solid dark — bukan gradien */
+    /* 🔥 SAMA PERSIS DENGAN NAVBAR 🔥 */
+    background: linear-gradient(90deg, #581c87, #9d174d);
     padding: 1rem 0;
     gap: 0.5rem;
-    /* Box-shadow dihilangkan untuk kesan clean */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Sedikit shadow biar terpisah dari konten */
   }
 
   .nav-menu.active {
@@ -106,14 +107,16 @@
     text-align: center;
     color: #ffffff;
     font-weight: 500;
-    border-radius: 0; /* Tidak pakai border-radius */
-    transition: background 0.3s ease;
+    border-radius: 0;
+    transition: background 0.25s ease, transform 0.15s ease;
   }
 
+  /* Efek saat hover/klik — sedikit gelap + sedikit naik */
   .nav-link:hover,
   .nav-link.active {
-    background: linear-gradient(90deg, #4f46e5, #8b5cf6); /* Gradien biru ungu gaya Herdi */
+    background: rgba(0, 0, 0, 0.2); /* Overlay gelap halus di atas gradien */
     color: white;
+    transform: translateY(-1px); /* Efek "angkat" halus */
     box-shadow: none;
   }
 
