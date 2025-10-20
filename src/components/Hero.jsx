@@ -18,13 +18,22 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
-      {/* Animasi Partikel (Background) */}
+      {/* Animasi Partikel Bulatan */}
       <div className="particles">
         {[...Array(8)].map((_, i) => (
-          <div key={i} className={`particle particle-${i + 1}`}></div>
+          <div key={`particle-${i}`} className={`particle particle-${i + 1}`}></div>
         ))}
       </div>
 
+      {/* ✨ ANIMASI BINTANG BARU */}
+      <div className="star star-1">★</div>
+      <div className="star star-2">★</div>
+      <div className="star star-3">★</div>
+      <div className="star star-4">★</div>
+      <div className="star star-5">★</div>
+      <div className="star star-6">★</div>
+
+      {/* Konten Utama */}
       <div className="hero-content">
         <div className="profile-circle">
           <img src={profilePic} alt="Lisna Desanti" />
