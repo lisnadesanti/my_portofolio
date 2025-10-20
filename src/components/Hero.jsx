@@ -18,20 +18,22 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
-      {/* Animasi Partikel Bulatan */}
-      <div className="particles">
-        {[...Array(8)].map((_, i) => (
-          <div key={`particle-${i}`} className={`particle particle-${i + 1}`}></div>
-        ))}
-      </div>
+      {/* ❌ PARTIKEL BULATAN DIHAPUS (TIDAK DITAMPILKAN LAGI) */}
+      {/* <div className="particles">...</div> */}
 
-      {/* ✨ ANIMASI BINTANG BARU */}
+      {/* ✨ BINTANG-BINTANG PUTIH/ABU-ABU (TETAP DIPERTAHANKAN) */}
       <div className="star star-1">★</div>
       <div className="star star-2">★</div>
       <div className="star star-3">★</div>
       <div className="star star-4">★</div>
       <div className="star star-5">★</div>
       <div className="star star-6">★</div>
+
+      {/* 🌟 BINTANG KUNING UTAMA + PARTIKEL KECIL KUNING (DITAMBAHKAN) */}
+      <div className="star-main">★</div>
+      <div className="star-particle star-particle-1">★</div>
+      <div className="star-particle star-particle-2">★</div>
+      <div className="star-particle star-particle-3">★</div>
 
       {/* Konten Utama */}
       <div className="hero-content">
