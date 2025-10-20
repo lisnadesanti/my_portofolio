@@ -9,13 +9,12 @@
   box-sizing: border-box;
 }
 
-/* ⚠️ PERBAIKAN UTAMA: TAMBAHKAN width & box-sizing */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%; /* ⬅️ tambahkan ini */
-  padding: 0 1rem; /* ⬅️ jaga padding tetap ada */
-  box-sizing: border-box; /* ⬅️ tambahkan ini */
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -70,7 +69,7 @@
   gap: 3rem;
   align-items: flex-start;
   width: 100%;
-  max-width: 1000px; /* ⬅️ batasi lebar maksimal */
+  max-width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -159,7 +158,12 @@
   color: white;
   font-size: 1rem;
   transition: all 0.3s;
-  box-sizing: border-box; /* ⬅️ tambahkan ini */
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
 .form-group input:focus,
@@ -180,7 +184,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-sizing: border-box; /* ⬅️ tambahkan ini */
+  box-sizing: border-box;
 }
 
 .btn-send:hover {
@@ -188,11 +192,11 @@
   box-shadow: 0 4px 12px rgba(255, 105, 180, 0.5);
 }
 
-/* Responsif */
+/* ✅ RESPONSIF — PERBAIKAN KHUSUS MOBILE */
 @media (max-width: 768px) {
   .contact-section {
     padding: 1.5rem 1rem;
-    padding-top: 70px; /* ⬅️ sesuaikan dengan navbar */
+    padding-top: 70px;
   }
 
   .section-title h2 {
@@ -206,13 +210,15 @@
 
   .contact-content {
     flex-direction: column;
-    gap: 2rem;
-    max-width: 100%; /* ⬅️ pastikan tidak melebar */
+    gap: 1.8rem;
+    max-width: 100%;
   }
 
   .contact-info,
   .contact-form {
     padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .contact-icon {
@@ -229,14 +235,24 @@
     font-size: 0.85rem;
   }
 
+  /* ✅ PERBAIKAN FORM DI MOBILE */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
   .form-group input,
   .form-group textarea {
     padding: 0.75rem 0.9rem;
     font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .btn-send {
     padding: 0.8rem;
     font-size: 0.95rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
