@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-/* ✨ BINTANG-BINTANG PUTIH/ABU-ABU (tetap di seluruh layar) */
+/* ✨ BINTANG-BINTANG PUTIH/ABU-ABU */
 .star {
   position: absolute;
   color: rgba(255, 255, 255, 0.6);
@@ -25,24 +25,14 @@
 .star-5 { top: 40%; left: 25%; animation-delay: 2s; }
 .star-6 { top: 50%; right: 30%; animation-delay: 0.8s; }
 
-/* 🔧 Perubahan: buat .profile-container jadi posisi relatif */
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  position: relative; /* ✅ DITAMBAHKAN */
-}
-
-/* 🌟 BINTANG KUNING UTAMA — sekarang di atas profil */
+/* 🌟 BINTANG KUNING UTAMA */
 .star-main {
   position: absolute;
-  color: #FFD700;
+  color: #FFD700; /* Kuning emas */
   font-size: 24px;
-  top: -50px; /* di atas foto */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+  top: 25%;
+  right: 35%;
+  z-index: 1;
   animation: twinkleStarMain 2s infinite ease-in-out;
 }
 
@@ -55,9 +45,9 @@
   animation: floatParticleSmall 3s infinite ease-in-out;
 }
 
-.star-particle-1 { top: -40px; left: 40%; animation-delay: 0s; }
-.star-particle-2 { top: -30px; left: 60%; animation-delay: 0.5s; }
-.star-particle-3 { top: -45px; left: 70%; animation-delay: 1s; }
+.star-particle-1 { top: 22%; right: 33%; animation-delay: 0s; }
+.star-particle-2 { top: 27%; right: 37%; animation-delay: 0.5s; }
+.star-particle-3 { top: 24%; right: 39%; animation-delay: 1s; }
 
 @keyframes twinkleStar {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -81,6 +71,13 @@
   padding: 2rem;
   z-index: 1;
   color: #ffffff;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 /* 🔍 FOTO PROFIL DIPERBESAR */
@@ -235,12 +232,13 @@
     font-size: 0.8rem;
   }
 
-  /* ✨ Perbarui posisi bintang utama & partikel untuk mobile */
+  /* ✨ Perbaikan: Geser bintang kuning ke pojok kanan atas, jauh dari foto profil */
   .star-main {
-    top: -40px;
+    top: 8%;
+    right: 12%;
     font-size: 20px;
   }
-  .star-particle-1 { top: -32px; left: 35%; }
-  .star-particle-2 { top: -24px; left: 55%; }
-  .star-particle-3 { top: -36px; left: 65%; }
+  .star-particle-1 { top: 6%; right: 10%; }
+  .star-particle-2 { top: 10%; right: 14%; }
+  .star-particle-3 { top: 8%; right: 16%; }
 }
