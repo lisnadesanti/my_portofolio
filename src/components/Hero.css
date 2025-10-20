@@ -232,13 +232,13 @@
     font-size: 0.8rem;
   }
 
-  /* Sesuaikan posisi bintang kuning di mobile agar tidak overlap */
+  /* ✨ Perbaikan: Geser bintang kuning ke pojok kanan atas, jauh dari foto profil */
   .star-main {
-    top: 28%;
-    right: 30%;
+    top: 8%;
+    right: 12%;
     font-size: 20px;
   }
-  .star-particle-1 { top: 25%; right: 28%; }
-  .star-particle-2 { top: 30%; right: 32%; }
-  .star-particle-3 { top: 27%; right: 34%; }
+  .star-particle-1 { top: 6%; right: 10%; }
+  .star-particle-2 { top: 10%; right: 14%; }
+  .star-particle-3 { top: 8%; right: 16%; }
 }
